@@ -6,15 +6,15 @@ Magyarországi nápolyi pizzériák statikus, kereshető kalauza.
 
 A `docs/` mappa a kész weboldal. A repository **Settings → Pages → Build and deployment** részében válaszd a `Deploy from a branch` lehetőséget, a `main` ágat és a `/docs` mappát. A GitHub Free csomagban ehhez nyilvános repository szükséges.
 
-Alapértelmezett cím: `https://tamasvegh-nov11.github.io/napolyipizzeriakalauz/`.
+Egyéni domain: `https://napolyipizzeriakalauz.com/`. A GitHub Pages a `main` ág `/docs` mappájából szolgálja ki az oldalt. A `docs/CNAME` fájl a GitHub Pages domainbeállításának része.
 
-Miután az új domaint megvetted és beállítottad GitHub Pages-ben, a hivatkozások és kanonikus URL-ek újragenerálása:
+Másik domain használatakor a hivatkozások és kanonikus URL-ek újragenerálása:
 
 ```bash
-SITE_BASE_URL=https://napolyipizzeriakalauz.hu/ python3 build.py
+SITE_BASE_URL=https://uj-domain.example/ python3 build.py
 ```
 
-Ezt követően a `docs/CNAME` fájlba csak a domainnév kerül (`napolyipizzeriakalauz.hu`), és a DNS-t a GitHub Pages hivatalos útmutatója szerint kell beállítani. A domain beállítása előtt ne hozz létre CNAME fájlt. A korábbi github.io címről az új domainre történő átálláskor ellenőrizd a canonical és sitemap URL-eket.
+Másik domainhez a `docs/CNAME` fájl tartalmát és a GitHub Pages, valamint a DNS-beállításokat is módosítani kell.
 
 ## Keresőeszközök
 

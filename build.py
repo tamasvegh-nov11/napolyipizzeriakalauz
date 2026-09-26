@@ -6,7 +6,7 @@ from xml.sax.saxutils import escape as xml_escape
 ROOT=Path(__file__).resolve().parent
 OUT=ROOT/'docs'
 DATA=json.loads((ROOT/'data/places.json').read_text())
-BASE=os.environ.get('SITE_BASE_URL','https://tamasvegh-nov11.github.io/napolyipizzeriakalauz/').rstrip('/')+'/'
+BASE=os.environ.get('SITE_BASE_URL','https://napolyipizzeriakalauz.com/').rstrip('/')+'/'
 assert BASE.startswith('https://')
 CSS=(ROOT/'data/site.css').read_text().replace('pizza.png','pizza.jpg')
 CSS+='''
@@ -50,6 +50,7 @@ def wrap(path,title,description,body,active='',schema=None,noindex=False):
 if OUT.exists():shutil.rmtree(OUT)
 OUT.mkdir()
 (OUT/'.nojekyll').write_text('')
+(OUT/'CNAME').write_text('napolyipizzeriakalauz.com\n')
 (OUT/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#182139"/><circle cx="32" cy="32" r="22" fill="#d8aa59"/><path d="M19 32c10-12 17-10 26 0-7 12-18 12-26 0" fill="#bb4a36"/></svg>')
 shutil.copy(ROOT/'data/pizza.jpg',OUT/'pizza.jpg')
 indexed=[]
