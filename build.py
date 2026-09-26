@@ -102,7 +102,7 @@ for name,slug in DETAIL.items():
 # Methodology from the live design, with no point values tied to a restaurant.
 source=(ROOT.parent/'pizza-layout/dist/index.html').read_text()
 section=re.search(r'<div class="shell section" id="modszertan">(.*?)</div><div class="shell section" id="blog">',source,re.S).group(1)
-method=f'<main class="site-main prose"><div class="breadcrumb">{link("","Főoldal")} / Módszertan</div>{section}<h2>Kiadói kapcsolat</h2><p>A kalauz kiadója a Salve márkához kötődik. A Salve pizzériák is szerepelnek a kalauzban és a minősítések között.</p></main>'
+method=f'<main class="site-main prose"><div class="breadcrumb">{link("","Főoldal")} / Módszertan</div>{section}</main>'
 indexed.append(wrap('modszertan/','Módszertan – hogyan értékeljük a nápolyi pizzériákat?','Online források, vendégvélemények és súlyozott szempontok. Félévenkénti felülvizsgálat, AI szerepe és az országos minősítések szabályai.',method,'modszertan/'))
 wrap('blog/','Blog – Nápolyi Pizzéria Kalauz','Cikkek a magyarországi nápolyi pizzáról.',f'<main class="site-main prose"><h1>Blog</h1><p>A cikkek a szerkesztésük után jelennek meg.</p>{link("pizzeriak/","Pizzériák keresése")}</main>','blog/',noindex=True)
 wrap('kapcsolat/','Kapcsolat – Nápolyi Pizzéria Kalauz','Kapcsolati oldal.',f'<main class="site-main prose"><h1>Kapcsolat</h1><p>A kapcsolati adatok a végleges megjelenéskor kerülnek ide.</p>{link("pizzeriak/","Pizzériák keresése")}</main>','kapcsolat/',noindex=True)
