@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tamasvegh-nov11.github.io/napolyipizzeriakalauz/sitemap.xml
