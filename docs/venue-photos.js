@@ -74,6 +74,7 @@
     source.target = '_blank';
     source.rel = 'noopener noreferrer';
     source.textContent = 'Google Maps';
+    source.setAttribute('translate', 'no');
     credit.append(source);
     for (const author of photo.authorAttributions || []) {
       const label = document.createElement('span');
@@ -115,23 +116,38 @@
         pump();
       }, { rootMargin: '250px' });
 
-      const scan = () => {
+      const scan = (event) => {
         document.querySelectorAll('.venue-photo:not([data-observed])').forEach(el => {
+          // Automatic carousel changes must not generate a stream of paid searches.
+          if (el.closest('#picks') && event?.detail?.loadCarousel !== true) return;
+          if (el.closest('#list article[hidden]')) return;
           el.dataset.observed = '1';
           observer.observe(el);
         });
       };
       document.addEventListener('venuephotos:refresh', scan);
-      scan();
+      scan({ detail: { loadCarousel: true } });
     } catch (error) {
       console.warn('Az étteremfotók most nem tölthetők be.', error);
     }
   };
 
-  const script = document.createElement('script');
-  script.src = 'https://maps.googleapis.com/maps/api/js?key=' +
-    encodeURIComponent(key) + '&v=weekly&loading=async&callback=initGuidePhotos';
-  script.async = true;
-  script.onerror = () => console.warn('A fotószolgáltatás nem érhető el.');
-  document.head.append(script);
+  // Do not even load the Google library on pages without visible photo cards.
+  const start = () => {
+    const script = document.createElement('script');
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=' +
+      encodeURIComponent(key) + '&v=weekly&loading=async&callback=initGuidePhotos';
+    script.async = true;
+    script.onerror = () => console.warn('A fotószolgáltatás nem érhető el.');
+    document.head.append(script);
+  };
+  const bootstrap = new IntersectionObserver((entries, observer) => {
+    if (entries.some(entry => entry.isIntersecting)) {
+      observer.disconnect();
+      start();
+    }
+  }, { rootMargin: '150px' });
+  document.querySelectorAll('.venue-photo, #picks').forEach(el => {
+    if (!el.closest('#list article[hidden]')) bootstrap.observe(el);
+  });
 })();
