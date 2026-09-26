@@ -448,7 +448,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": false,
-    "official_url": "https://www.bellidimamma.hu/menu/index.php"
+    "official_url": "https://www.bellidimamma.hu/menu/index.php",
+    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
   },
   {
     "id": "HU-NP-042",
@@ -459,7 +460,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": false,
-    "official_url": "https://fermento.hu/"
+    "official_url": "https://fermento.hu/",
+    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
   },
   {
     "id": "HU-NP-043",
@@ -470,7 +472,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": false,
-    "official_url": "https://www.donnamamma.hu/"
+    "official_url": "https://www.donnamamma.hu/",
+    "avpn_url": "https://www.pizzanapoletana.org/en/associati/785-donna_mamma_pizza_napoletana"
   },
   {
     "id": "HU-NP-044",
@@ -503,7 +506,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": false,
-    "official_url": "https://www.igenpizza.hu/"
+    "official_url": "https://www.igenpizza.hu/",
+    "avpn_url": "https://www.pizzanapoletana.org/en/associati/756-igen"
   },
   {
     "id": "HU-NP-047",
@@ -817,34 +821,23 @@
     "id": "HU-NP-075",
     "name": "Pizza ’O Sole Mio Buda",
     "city": "Budapest",
-    "address": "",
+    "address": "Máriaremetei út 116.",
     "grade": "unrated",
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://pizzaosolemio.hu/"
-  },
-  {
-    "id": "HU-NP-076",
-    "name": "Pizza ’O Sole Mio XVI.",
-    "city": "Budapest",
-    "address": "",
-    "grade": "unrated",
-    "seasonal": false,
-    "verify": false,
-    "insufficient": true,
-    "official_url": "https://pizzaosolemio.hu/"
+    "official_url": "https://pizzaosolemio.hu/buda/"
   },
   {
     "id": "HU-NP-077",
     "name": "Pizza ’O Sole Mio Göd",
     "city": "Göd",
-    "address": "",
+    "address": "Szent István utca 24.",
     "grade": "unrated",
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://pizzaosolemio.hu/"
+    "official_url": "https://pizzaosolemio.hu/god/"
   },
   {
     "id": "HU-NP-078",
@@ -855,7 +848,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": false,
-    "official_url": "https://pomodorobudapest.com/"
+    "official_url": "https://pomodorobudapest.com/",
+    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
   },
   {
     "id": "HU-NP-079",
@@ -976,7 +970,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://www.rudiesficko.hu/about"
+    "official_url": "https://www.rudiesficko.hu/about",
+    "avpn_url": "https://www.pizzanapoletana.org/en/associati/1330-rudi_es_ficko"
   },
   {
     "id": "HU-NP-090",
@@ -1009,7 +1004,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": ""
+    "official_url": "",
+    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
   },
   {
     "id": "HU-NP-093",
@@ -1207,7 +1203,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": false,
-    "official_url": "https://vegazzi.hu/fooldal/"
+    "official_url": "https://vegazzi.hu/fooldal/",
+    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
   },
   {
     "id": "HU-NP-111",
@@ -1218,7 +1215,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://szomszedbisztro.hu/napolyi-pizza/"
+    "official_url": "https://szomszedbisztro.hu/napolyi-pizza/",
+    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
   },
   {
     "id": "HU-NP-112",
@@ -1229,7 +1227,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://szabiapek.hu/panificio-il-basilico-szentendre/"
+    "official_url": "https://szabiapek.hu/panificio-il-basilico-szentendre/",
+    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
   },
   {
     "id": "HU-NP-113",
@@ -1240,7 +1239,8 @@
     "seasonal": false,
     "verify": true,
     "insufficient": true,
-    "official_url": "https://voilaclub.hu/"
+    "official_url": "https://voilaclub.hu/",
+    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
   },
   {
     "id": "HU-NP-114",
@@ -1251,7 +1251,8 @@
     "seasonal": false,
     "verify": true,
     "insufficient": true,
-    "official_url": "https://pomodorobudapest.com/"
+    "official_url": "https://pomodorobudapest.com/",
+    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
   },
   {
     "id": "HU-NP-115",
@@ -1340,5 +1341,28 @@
     "verify": true,
     "insufficient": true,
     "official_url": ""
+  },
+  {
+    "id": "HU-NP-123",
+    "name": "Zsiráf Buda",
+    "city": "Budapest",
+    "address": "Kis Rókus utca 2–4.",
+    "grade": "unrated",
+    "seasonal": false,
+    "verify": false,
+    "insufficient": true,
+    "official_url": "https://zsirafbuda.hu/"
+  },
+  {
+    "id": "HU-NP-124",
+    "name": "All’Elefante Ristorante e Pizzeria",
+    "city": "Pécs",
+    "address": "Jókai tér 6.",
+    "grade": "unrated",
+    "seasonal": false,
+    "verify": false,
+    "insufficient": true,
+    "official_url": "https://elefantos.hu/",
+    "avpn_url": "https://www.pizzanapoletana.org/en/associati/930-all_elefante_ristorante_e_pizzeria"
   }
 ]
