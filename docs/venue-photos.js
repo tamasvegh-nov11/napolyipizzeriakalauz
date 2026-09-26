@@ -59,8 +59,13 @@
   }
 
   async function fetchPlace(el) {
-    const { placeName: name, placeCity: city, placeAddress: address } = el.dataset;
-    const id = [name, city, address].join('|');
+    const { placeName: name, placeCity: city, placeAddress: displayedAddress,
+      photoLookupName, photoLookupAddress } = el.dataset;
+    // Some businesses use a short name or a street address on Google Maps,
+    // while their own listing uses a longer name or a parcel number.
+    const lookupName = photoLookupName || name;
+    const address = photoLookupAddress || displayedAddress;
+    const id = [lookupName, city, address].join('|');
     if (!results.has(id)) {
       results.set(id, (async () => {
         const cachedId = savedPlaceId(id);
@@ -73,7 +78,7 @@
           } catch { /* A removed or changed place needs a fresh search. */ }
           forgetPlaceId(id);
         }
-        const query = [name, address, city, 'Magyarország'].filter(Boolean).join(', ');
+        const query = [lookupName, address, city, 'Magyarország'].filter(Boolean).join(', ');
         const { places = [] } = await Place.searchByText({
           textQuery: query,
           fields: ['id', 'displayName', 'formattedAddress', 'photos', 'googleMapsURI'],
@@ -81,7 +86,7 @@
           language: 'hu',
           region: 'hu'
         });
-        const match = places.find(p => matches(p, name, city, address) && p.photos?.length) || null;
+        const match = places.find(p => matches(p, lookupName, city, address) && p.photos?.length) || null;
         if (match?.id) savePlaceId(id, match.id);
         return match;
       })().catch(() => null));

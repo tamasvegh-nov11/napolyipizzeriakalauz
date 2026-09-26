@@ -37,7 +37,7 @@ def external(place):
 def detail(place):
  slug=DETAIL.get(place['name'])
  return f'pizzeria/{slug}/' if slug else ''
-def photo(place):return f'<div class="photo-mock venue-photo" data-place-name="{e(place["name"])}" data-place-city="{e(place["city"])}" data-place-address="{e(place["address"])}" role="img" aria-label="{e(place["name"])}: az éttermi fotó helye"><div class="photo-mark">NP</div><span>ÉTTERMI FOTÓ HELYE</span></div>'
+def photo(place):return f'<div class="photo-mock venue-photo" data-place-name="{e(place["name"])}" data-place-city="{e(place["city"])}" data-place-address="{e(place["address"])}" data-photo-lookup-name="{e(place.get("photo_lookup_name", ""))}" data-photo-lookup-address="{e(place.get("photo_lookup_address", ""))}" role="img" aria-label="{e(place["name"])}: az éttermi fotó helye"><div class="photo-mark">NP</div><span>ÉTTERMI FOTÓ HELYE</span></div>'
 def associations(place):
  badges=[]
  for field,label in [('fupi_recognition_url','FUPI ↗'),('avpn_url','AVPN ↗')]:
