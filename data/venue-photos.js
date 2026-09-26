@@ -13,6 +13,29 @@
   const pending = [];
   let active = 0;
   let Place;
+  const ID_CACHE_DAYS = 30;
+  const idCacheKey = id => `np:place-id:v1:${id}`;
+
+  function savedPlaceId(id) {
+    try {
+      const saved = JSON.parse(localStorage.getItem(idCacheKey(id)) || 'null');
+      if (saved?.placeId && saved.expires > Date.now()) return saved.placeId;
+      localStorage.removeItem(idCacheKey(id));
+    } catch { /* Browsers can disable local storage. */ }
+    return null;
+  }
+
+  function savePlaceId(id, placeId) {
+    try {
+      localStorage.setItem(idCacheKey(id), JSON.stringify({
+        placeId, expires: Date.now() + ID_CACHE_DAYS * 24 * 60 * 60 * 1000
+      }));
+    } catch { /* Continue without local storage. */ }
+  }
+
+  function forgetPlaceId(id) {
+    try { localStorage.removeItem(idCacheKey(id)); } catch { /* Ignore. */ }
+  }
 
   function matches(candidate, name, city, address) {
     const foundName = normalize(candidate.displayName);
@@ -38,6 +61,16 @@
     const id = [name, city, address].join('|');
     if (!results.has(id)) {
       results.set(id, (async () => {
+        const cachedId = savedPlaceId(id);
+        if (cachedId) {
+          try {
+            // Place IDs may be saved; photos and their temporary URLs may not.
+            const cachedPlace = new Place({ id: cachedId });
+            await cachedPlace.fetchFields({ fields: ['photos'] });
+            if (cachedPlace.photos?.length) return cachedPlace;
+          } catch { /* A removed or changed place needs a fresh search. */ }
+          forgetPlaceId(id);
+        }
         const query = [name, address, city, 'Magyarország'].filter(Boolean).join(', ');
         const { places = [] } = await Place.searchByText({
           textQuery: query,
@@ -46,7 +79,9 @@
           language: 'hu',
           region: 'hu'
         });
-        return places.find(p => matches(p, name, city, address) && p.photos?.length) || null;
+        const match = places.find(p => matches(p, name, city, address) && p.photos?.length) || null;
+        if (match?.id) savePlaceId(id, match.id);
+        return match;
       })().catch(() => null));
     }
     return results.get(id);
