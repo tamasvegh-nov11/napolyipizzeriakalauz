@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Build the public, crawlable GitHub Pages edition from reviewed public records."""
-import html,json,re,shutil,os
+import html,json,re,shutil,os,hashlib
 from pathlib import Path
 from xml.sax.saxutils import escape as xml_escape
 ROOT=Path(__file__).resolve().parent
 OUT=ROOT/'docs'
 DATA=json.loads((ROOT/'data/places.json').read_text())
+PHOTO_CONFIG_VERSION=hashlib.sha256((ROOT/'data/photo-config.js').read_bytes()).hexdigest()[:12]
 BASE=os.environ.get('SITE_BASE_URL','https://napolyipizzeriakalauz.com/').rstrip('/')+'/'
 assert BASE.startswith('https://')
 CSS=(ROOT/'data/site.css').read_text().replace('pizza.png','pizza.jpg')
@@ -53,7 +54,7 @@ def wrap(path,title,description,body,active='',schema=None,noindex=False):
  meta=f'<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{e(title)}</title><meta name="description" content="{e(description)}"><link rel="canonical" href="{e(canonical)}"><meta property="og:type" content="website"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(canonical)}">'
  if noindex:meta+='<meta name="robots" content="noindex,follow">'
  mark=jsonld(schema) if schema else ''
- content=f'''<!doctype html><html lang="hu"><head>{meta}<link rel="icon" href="{e(url('favicon.svg'))}" type="image/svg+xml"><style>{CSS}</style>{mark}<script defer src="{e(url('photo-config.js'))}"></script><script defer src="{e(url('venue-photos.js'))}"></script></head><body><header class="header"><div class="shell header-inner"><a href="{e(url())}" class="brand">NÁPOLYI <span>PIZZÉRIA</span> KALAUZ</a><nav class="nav" aria-label="Főmenü">{navhtml}</nav></div></header>{body}<footer class="footer"><div class="shell"><span>© 2026 Nápolyi Pizzéria Kalauz · A kalauz kiadója a Salve márkához kötődik.</span><span>{link('modszertan/','Módszertan')} · {link('adatkezeles/','Adatkezelés és feltételek')} · Utolsó adatgyűjtés: 2026. szeptember 26.</span></div></footer></body></html>'''
+ content=f'''<!doctype html><html lang="hu"><head>{meta}<link rel="icon" href="{e(url('favicon.svg'))}" type="image/svg+xml"><style>{CSS}</style>{mark}<script defer src="{e(url('photo-config.js'))}?v={PHOTO_CONFIG_VERSION}"></script><script defer src="{e(url('venue-photos.js'))}"></script></head><body><header class="header"><div class="shell header-inner"><a href="{e(url())}" class="brand">NÁPOLYI <span>PIZZÉRIA</span> KALAUZ</a><nav class="nav" aria-label="Főmenü">{navhtml}</nav></div></header>{body}<footer class="footer"><div class="shell"><span>© 2026 Nápolyi Pizzéria Kalauz · A kalauz kiadója a Salve márkához kötődik.</span><span>{link('modszertan/','Módszertan')} · {link('adatkezeles/','Adatkezelés és feltételek')} · Utolsó adatgyűjtés: 2026. szeptember 26.</span></div></footer></body></html>'''
  target=OUT/path/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(content)
  return path
 
