@@ -63,7 +63,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": false,
-    "official_url": "https://salve.hu/salve-basilica/"
+    "official_url": "https://salve.hu/salve-basilica/",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-007",
@@ -74,7 +75,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": false,
-    "official_url": "https://salve.hu/salve-pest/"
+    "official_url": "https://salve.hu/salve-pest/",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-008",
@@ -85,7 +87,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://salve.hu/salve-budapart/"
+    "official_url": "https://salve.hu/salve-budapart/",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-009",
@@ -96,7 +99,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://salve.hu/salve-popup/"
+    "official_url": "https://salve.hu/salve-popup/",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-010",
@@ -129,7 +133,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://pizzasztori.hu/nagykanizsa"
+    "official_url": "https://pizzasztori.hu/nagykanizsa",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-013",
@@ -140,7 +145,8 @@
     "seasonal": true,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://pizzasztori.hu/balaton"
+    "official_url": "https://pizzasztori.hu/balaton",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-014",
@@ -173,7 +179,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": false,
-    "official_url": "https://anyukammondta.hu/"
+    "official_url": "https://anyukammondta.hu/",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-017",
@@ -251,7 +258,8 @@
     "verify": false,
     "insufficient": false,
     "official_url": "https://elefantos.hu/",
-    "avpn_url": "https://www.pizzanapoletana.org/en/associati/930-all_elefante_ristorante_e_pizzeria"
+    "avpn_url": "https://www.pizzanapoletana.org/en/associati/930-all_elefante_ristorante_e_pizzeria",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-024",
@@ -262,7 +270,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://www.quasi.hu/pizza/"
+    "official_url": "https://www.quasi.hu/pizza/",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-025",
@@ -328,7 +337,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": false,
-    "official_url": "https://casadinapoli.hu/kinalat"
+    "official_url": "https://casadinapoli.hu/kinalat",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-031",
@@ -339,7 +349,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://kavandra.hu/"
+    "official_url": "https://kavandra.hu/",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-032",
@@ -361,7 +372,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": false,
-    "official_url": ""
+    "official_url": "",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-034",
@@ -394,7 +406,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": false,
-    "official_url": ""
+    "official_url": "",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-037",
@@ -450,7 +463,7 @@
     "verify": false,
     "insufficient": false,
     "official_url": "https://www.bellidimamma.hu/menu/index.php",
-    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-042",
@@ -462,7 +475,7 @@
     "verify": false,
     "insufficient": false,
     "official_url": "https://fermento.hu/",
-    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-043",
@@ -496,7 +509,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://amoredinapoli.hu/"
+    "official_url": "https://amoredinapoli.hu/",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-046",
@@ -596,7 +610,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": ""
+    "official_url": "",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-055",
@@ -651,7 +666,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://cukorborso-restaurant.eatbu.com/?lang=hu"
+    "official_url": "https://cukorborso-restaurant.eatbu.com/?lang=hu",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-060",
@@ -717,7 +733,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": ""
+    "official_url": "",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-066",
@@ -761,7 +778,8 @@
     "seasonal": false,
     "verify": true,
     "insufficient": true,
-    "official_url": ""
+    "official_url": "",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-070",
@@ -850,7 +868,7 @@
     "verify": false,
     "insufficient": false,
     "official_url": "https://pomodorobudapest.com/",
-    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-079",
@@ -894,7 +912,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://rebelburger.hu/pizza/"
+    "official_url": "https://rebelburger.hu/pizza/",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-083",
@@ -960,7 +979,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": ""
+    "official_url": "",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-089",
@@ -1006,7 +1026,7 @@
     "verify": false,
     "insufficient": true,
     "official_url": "",
-    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-093",
@@ -1072,7 +1092,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://lodoredinapoli.hu/"
+    "official_url": "https://lodoredinapoli.hu/",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-099",
@@ -1205,7 +1226,7 @@
     "verify": false,
     "insufficient": false,
     "official_url": "https://vegazzi.hu/fooldal/",
-    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-111",
@@ -1217,7 +1238,7 @@
     "verify": false,
     "insufficient": true,
     "official_url": "https://szomszedbisztro.hu/napolyi-pizza/",
-    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-112",
@@ -1229,7 +1250,7 @@
     "verify": false,
     "insufficient": true,
     "official_url": "https://szabiapek.hu/panificio-il-basilico-szentendre/",
-    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-113",
@@ -1241,7 +1262,7 @@
     "verify": true,
     "insufficient": true,
     "official_url": "https://voilaclub.hu/",
-    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-114",
@@ -1253,7 +1274,7 @@
     "verify": true,
     "insufficient": true,
     "official_url": "https://pomodorobudapest.com/",
-    "fupi_recognition_url": "https://hungexpo.hu/news/nagy-erdeklodes-a-sirha-budapest-2026-sajtotajekoztatojan/"
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-115",
@@ -1308,7 +1329,8 @@
     "seasonal": false,
     "verify": false,
     "insufficient": true,
-    "official_url": "https://vespapizza.hu/kapcsolat/"
+    "official_url": "https://vespapizza.hu/kapcsolat/",
+    "fupi_recognition_url": "https://fupihungary.hu/#pizzaterkep"
   },
   {
     "id": "HU-NP-120",
