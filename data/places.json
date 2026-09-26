@@ -245,12 +245,13 @@
     "id": "HU-NP-023",
     "name": "Elefántos Étterem és Pizzéria",
     "city": "Pécs",
-    "address": "",
+    "address": "Jókai tér 6.",
     "grade": "silver",
     "seasonal": false,
     "verify": false,
     "insufficient": false,
-    "official_url": "https://elefantos.hu/"
+    "official_url": "https://elefantos.hu/",
+    "avpn_url": "https://www.pizzanapoletana.org/en/associati/930-all_elefante_ristorante_e_pizzeria"
   },
   {
     "id": "HU-NP-024",
@@ -1347,22 +1348,10 @@
     "name": "Zsiráf Buda",
     "city": "Budapest",
     "address": "Kis Rókus utca 2–4.",
-    "grade": "unrated",
+    "grade": "silver",
     "seasonal": false,
     "verify": false,
-    "insufficient": true,
+    "insufficient": false,
     "official_url": "https://zsirafbuda.hu/"
-  },
-  {
-    "id": "HU-NP-124",
-    "name": "All’Elefante Ristorante e Pizzeria",
-    "city": "Pécs",
-    "address": "Jókai tér 6.",
-    "grade": "unrated",
-    "seasonal": false,
-    "verify": false,
-    "insufficient": true,
-    "official_url": "https://elefantos.hu/",
-    "avpn_url": "https://www.pizzanapoletana.org/en/associati/930-all_elefante_ristorante_e_pizzeria"
   }
 ]

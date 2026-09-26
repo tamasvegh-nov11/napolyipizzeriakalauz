@@ -1,0 +1,33 @@
+{
+  "review_date": "2026-09-26",
+  "basis": "Online guest text about pizza and on-site dining; delivery logistics excluded. Ratings alone do not substitute for sub-scores. Scale: each criterion 0–5, weighted to 100 by (35,25,15,15,10)/5. FuPi or AVPN association status does not add points.",
+  "weights": {"pizza": 35, "service": 25, "consistency": 15, "value": 15, "local_experience": 10},
+  "venues": [
+    {
+      "id": "HU-NP-023", "name": "Elefántos Étterem és Pizzéria / All’Elefante", "previous_score": 80,
+      "subscores": {"pizza": 4, "service": 3.5, "consistency": 3.5, "value": 3.5, "local_experience": 4},
+      "score": 74.5, "grade": "silver", "confidence": "moderate",
+      "rationale": "2025 on-site guest reports praise wood-fired Neapolitan pizza and service, but 2026 first-hand reports cite a salty pizza, slow service and a serious billing mistake. Earlier positive reviews and a pleasant location still count. Association membership has no scoring bonus.",
+      "sources": ["https://www.ittjartam.hu/pecs/ettermek/elefantos-etterem-pizzeria/", "https://www.tripadvisor.co.uk/Restaurant_Review-g274905-d1103103-Reviews-All_Elefante_Ristorante_Pizzeria-Pecs_Baranya_County_Southern_Transdanubia.html"]
+    },
+    {
+      "id": "HU-NP-123", "name": "Zsiráf Buda", "previous_score": null,
+      "subscores": {"pizza": 3.5, "service": 4, "consistency": 3, "value": 3.5, "local_experience": 4},
+      "score": 72, "grade": "silver", "confidence": "moderate",
+      "rationale": "Recent pizza-specific guest text praises the flavor and on-site atmosphere, but several separate guests report undercooked or burned dough or weak toppings. Delivery time and packaging complaints were excluded; kitchen quality comments on pizza were retained. On-site guest feedback supports service and atmosphere.",
+      "sources": ["https://www.foodora.hu/restaurant/kkr1/zsiraf-buda/reviews", "https://wanderlog.com/place/details/2309847/zsir%C3%A1f-buda", "https://restaurantguru.com/Zsiraf-Buda-Budapest"]
+    },
+    {
+      "id": "HU-NP-075", "name": "Pizza ’O Sole Mio Buda", "previous_score": null,
+      "subscores": null, "score": null, "grade": "unrated", "confidence": "insufficient pizza-specific accessible text",
+      "rationale": "The aggregate Google and Foodora ratings are strong, but the accessible on-site TripAdvisor record has one pickup review and the indexed Google snippets contain mostly stars or generic food/service scores. The five separate pizza and on-site quality criteria cannot yet be justified without guessing.",
+      "sources": ["https://www.tripadvisor.co.uk/Restaurant_Review-g274887-d33231121-Reviews-Pizza_O_Sole_Mio_Buda-Budapest_Central_Hungary.html", "https://restaurantguru.com/Pizza-O-Sole-Mio-Buda-Budapest"]
+    },
+    {
+      "id": "HU-NP-077", "name": "Pizza ’O Sole Mio Göd", "previous_score": null,
+      "subscores": null, "score": null, "grade": "unrated", "confidence": "insufficient pizza-specific accessible text",
+      "rationale": "The Google aggregate is strong but indexed recent on-site comments mostly provide category ratings without explaining pizza dough, taste or consistency. The delivery menu and general business summary do not prove all five criteria.",
+      "sources": ["https://restaurantguru.com/Pizza-O-Sole-Mio-God", "https://www.foodora.hu/restaurant/yo1y/pizza-o-sole-mio-god/reviews"]
+    }
+  ]
+}
