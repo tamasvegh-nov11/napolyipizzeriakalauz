@@ -73,6 +73,9 @@ OUT.mkdir()
 shutil.copy(ROOT/'data/pizza.jpg',OUT/'pizza.jpg')
 shutil.copy(ROOT/'data/venue-photos.js',OUT/'venue-photos.js')
 shutil.copy(ROOT/'data/photo-config.js',OUT/'photo-config.js')
+indexnow_key=(ROOT/'data/indexnow-key.txt').read_text().strip()
+assert re.fullmatch(r'[a-zA-Z0-9-]{8,128}',indexnow_key)
+(OUT/f'{indexnow_key}.txt').write_text(indexnow_key)
 indexed=[]
 # Home: visible content and links in initial HTML; carousel only enhances it.
 gold=[p for p in DATA if p['grade']=='gold']
