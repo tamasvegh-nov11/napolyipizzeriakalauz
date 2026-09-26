@@ -40,8 +40,13 @@
   function matches(candidate, name, city, address) {
     const foundName = normalize(candidate.displayName);
     const foundAddress = normalize(candidate.formattedAddress);
-    const nameTokens = tokens(name);
-    if (!nameTokens.length || !foundName.includes(nameTokens[0])) return false;
+    // Branch names sometimes append their city, while the Google listing does
+    // not (for example "Nagykanizsa" versus "Kanizsa"). The city is checked
+    // independently against the returned address.
+    const cityTokens = new Set(tokens(city));
+    const nameTokens = tokens(name).filter(t => !cityTokens.has(t));
+    const overlapping = nameTokens.filter(t => foundName.includes(t));
+    if (!nameTokens.length || overlapping.length < Math.min(nameTokens.length, 2)) return false;
     if (!foundAddress.includes(normalize(city))) return false;
 
     if (address) {
@@ -49,9 +54,6 @@
       const house = normalize(address).match(/\b\d+[a-z]?\b/);
       if (street && !foundAddress.includes(street)) return false;
       if (house && !foundAddress.includes(house[0])) return false;
-    } else if (nameTokens.length > 1 &&
-               !nameTokens.slice(1).some(t => foundName.includes(t))) {
-      return false;
     }
     return true;
   }
