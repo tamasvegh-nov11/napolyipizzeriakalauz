@@ -22,7 +22,7 @@ A ténylegesen elérhető, végleges domain tulajdonjogát ellenőrizd a Google 
 
 ## Tartalomfrissítés
 
-A `data/places.json` csak a nyilvános telephelyadatokat tartalmazza, belső részpontokat nem. Módosítás után futtasd a `python3 build.py` parancsot, és commitold az új `docs/` állományt. A kiemelt helyek, az összes pizzéria oldala, a módszertan és a külön adatlapok statikus HTML-ben is megjelennek. A `blog/` és `kapcsolat/` oldalak addig `noindex` jelzést kapnak, amíg valós tartalom és kapcsolati adat nem kerül rájuk.
+A `data/places.json` csak a nyilvános telephelyadatokat tartalmazza, belső részpontokat nem. Módosítás után futtasd a `python3 build.py` parancsot, és commitold az új `docs/` állományt. A kiemelt helyek, az összes pizzéria oldala, a módszertan és a külön adatlapok statikus HTML-ben is megjelennek. A blog és a kapcsolat oldal is szerepel a webhelytérképen; a kapcsolat menü a projekt nyilvános GitHub hibajegyeihez vezet.
 
 A `docs/pizza.jpg` általános illusztráció; a kártyákon az éttermi fotó helyét mockup jelzi. A tényleges fotókhoz az adott helyhez kötött, jogszerű forrás és szükség esetén fotós attribúció szükséges. A generátor a `data/site.css` és `data/pizza.jpg` forrásfájlokat használja.
 
